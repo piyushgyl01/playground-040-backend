@@ -18,6 +18,9 @@ app.use(cookieParser());
 //auth
 app.use("/api/v1/auth", require("./routes/authRoute"));
 
+//post CRUD operations
+app.use("/api/v1/posts", require("./routes/postRoute"));
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
